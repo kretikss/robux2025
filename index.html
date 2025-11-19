@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Robux Generator 2025 - No Human Verification</title>
+    <meta name="description" content="Get up to 80,000 Free Robux in 2025! New method, no password, no verification needed. Works November 2025!">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #1a1a2e, #16213e); color:#fff; min-height:100vh; }
+        .container { max-width:480px; margin:0 auto; padding:20px; text-align:center; }
+        header { padding:30px 0; }
+        h1 { font-size:28px; margin-bottom:10px; }
+        .subtitle { color:#00ff9d; font-size:18px; margin-bottom:30px; }
+        .robux-options { display:grid; grid-template-columns:1fr 1fr; gap:15px; margin:30px 0; }
+        .option { background:rgba(255,255,255,0.1); border:2px solid #00ff9d; border-radius:12px; padding:20px; cursor:pointer; transition:0.3s; }
+        .option:hover { background:rgba(0,255,157,0.2); transform:scale(1.05); }
+        .option.selected { border-color:#ffd700; background:rgba(255,215,0,0.2); }
+        .amount { font-size:26px; font-weight:bold; }
+        #generateBtn { background:#00ff9d; color:#000; font-weight:bold; font-size:20px; padding:15px; border:none; border-radius:12px; cursor:pointer; width:100%; margin:30px 0; }
+        #generateBtn:disabled { background:#555; cursor:not-allowed; }
+        .progress-container { display:none; background:rgba(0,0,0,0.4); padding:20px; border-radius:12px; margin:20px 0; }
+        .progress-bar { height:20px; background:#333; border-radius:10px; overflow:hidden; margin:15px 0; }
+        .progress { height:100%; width:0%; background:linear-gradient(90deg,#00ff9d,#ffd700); transition:width 0.4s; }
+        .status { font-size:18px; margin:10px 0; }
+        .verification { display:none; background:rgba(255,255,255,0.1); padding:25px; border-radius:12px; margin-top:20px; }
+        .offer { background:rgba(0,255,157,0.2); border:1px solid #00ff9d; border-radius:10px; padding:20px; margin:15px 0; }
+        .offer-btn { background:#ffd700; color:#000; padding:12px 25px; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block; margin-top:10px; }
+        footer { margin-top:50px; font-size:12px; color:#888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Free Robux Generator 2025</h1>
+            <p class="subtitle">Новый метод • Без пароля • Без верификации аккаунта • Работает ноябрь 2025</p>
+        </header>
 
+        <div class="robux-options">
+            <div class="option" data-amount="1000">1 000<span class="amount"><br>Robux</span></div>
+            <div class="option" data-amount="5000">5 000<span class="amount"><br>Robux</span></div>
+            <div class="option" data-amount="10000">10 000<span class="amount"><br>Robux</span></div>
+            <div class="option" data-amount="22000">22 000<span class="amount"><br>Robux</span></div>
+            <div class="option" data-amount="40000">40 000<span class="amount"><br>Robux</span></div>
+            <div class="option" data-amount="80000">80 000<span class="amount"><br>Robux</span></div>
+        </div>
+
+        <button id="generateBtn" disabled>Выберите количество и нажмите Generate</button>
+
+        <div class="progress-container" id="progressContainer">
+            <div class="status" id="status">Connecting to Roblox servers...</div>
+            <div class="progress-bar"><div class="progress" id="progress"></div></div>
+        </div>
+
+        <div class="verification" id="verification">
+<h2>✅ Robux успешно сгенерированы!</h2>
+            <p>Чтобы завершить зачисление, пройдите короткую человеческую проверку (защита от ботов, 1–2 минуты)</p>
+            
+            <div class="offer">
+                <p>Вариант 1 — Самый быстрый (30–60 сек)</p>
+                <a href="https://www.cpagrip.com/show.php?l=0&u=ВАШ_ID&id=ВАШ_OFFER_ID" target="_blank" class="offer-btn" onclick="completeVerification()">
+                    Пройти проверку →</a>
+            </div>
+            
+            <div class="offer">
+                <p>Вариант 2 — Ещё быстрее</p>
+                <a href="https://hasoffers.com/yourlink2" target="_blank" class="offer-btn" onclick="completeVerification()">
+                    Пройти проверку →</a>
+            </div>
+            
+            <div class="offer">
+                <p>Вариант 3</p>
+                <a href="https://lootably.com/yourlink3" target="_blank" class="offer-btn" onclick="completeVerification()">
+                    Пройти проверку →</a>
+            </div>
+
+            <p style="margin-top:30px; color:#00ff9d; font-size:20px; display:none;" id="final">Robux будут зачислены в течение 5 минут! Обновите игру 😉</p>
+        </div>
+
+        <footer>
+            © 2025 Free Robux Generator • Not affiliated with Roblox Corporation
+        </footer>
+    </div>
+
+    <script>
+        let selectedAmount = 0;
+        const options = document.querySelectorAll('.option');
+        const generateBtn = document.getElementById('generateBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const verification = document.getElementById('verification');
+        const progress = document.getElementById('progress');
+        const status = document.getElementById('status');
+        const final = document.getElementById('final');
+
+        options.forEach(opt => {
+            opt.addEventListener('click', () => {
+                options.forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+                selectedAmount = opt.dataset.amount;
+                generateBtn.disabled = false;
+                generateBtn.textContent = Generate ${selectedAmount} Robux;
+            });
+        });
+
+        generateBtn.addEventListener('click', () => {
+            if (!selectedAmount) return;
+            
+            generateBtn.style.display = 'none';
+            progressContainer.style.display = 'block';
+            
+            let percent = 0;
+            const steps = [
+                "Connecting to Roblox servers...",
+                "Bypassing anti-bot protection...",
+                "Injecting Robux into account...",
+                "Finalizing transaction...",
+                "Done! Redirecting to verification..."
+            ];
+            let step = 0;
+
+            const interval = setInterval(() => {
+                percent += Math.random() * 15 + 5;
+                if (percent > 100) percent = 100;
+                progress.style.width = percent + '%';
+                status.textContent = steps[step];
+                step++;
+                
+                if (percent >= 100) {
+                    clearInterval(interval);
+                    progressContainer.style.display = 'none';
+                    verification.style.display = 'block';
+                }
+            }, 800);
+        });
+
+        function completeVerification() {
+            setTimeout(() => {
+                final.style.display = 'block';
+            }, 30000); // имитация "зачисления" через 30 сек после перехода по офферу
+        }
+    </script>
+</body>
+</html>
